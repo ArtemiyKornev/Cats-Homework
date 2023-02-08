@@ -13,23 +13,15 @@ class Card {
     const cardTitle = this.element.querySelector('.card__name');
     const cardImage = this.element.querySelector('.card__image');
     const cardLike = this.element.querySelector('.card__like');
-   // const cardDelete = this.element.querySelector('.card__delete');
 
-    // console.log({ cardDelete });
-
-    // console.log('>>>', this._data);
-    ///cardDelete.classList.add(`${this._data.id}`);
-
-    if (!this._data.favorite) {
+     if (!this._data.favorite) {
       cardLike.remove();
     }
 
     cardTitle.textContent = this._data.name ?? 'Vasya';
-    cardImage.src = this._data.image || '#';
+    cardImage.src = this._data.image || 'https://http.cat/102';
     cardTitle.textContent = this._data.name ?? '#';
     cardImage.src = this._data.image || '#';
     return this.element;
   }
 }
-
-///const card = new Card(cats[0], '#card-template');
